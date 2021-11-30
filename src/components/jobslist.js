@@ -37,12 +37,8 @@ const JobsList = () => {
 
     return (
         <div>
-            <select className="SelectLang"value = {context.locale} onChange={context.selectLanguage}>
-                <option value= 'es'>{context.locale==='en'?'Spanish':'Español'}</option>
-                <option value= 'en'>{context.locale==='en'?'English':'Inglés'}</option>
-            </select>
             <table className="table">
-                <thead className={context.locale==='en'?"table-dark":"table-light"}>
+                <thead className={context.locale === 'en' ? "table-dark" : "table-light"}>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">
@@ -72,6 +68,10 @@ const JobsList = () => {
                 ))}
                 </tbody>
             </table>
+            <select className="SelectLang" value={context.locale} onChange={context.selectLanguage}>
+                <option value='es'>{context.locale === 'en' ? 'Spanish' : 'Español'}</option>
+                <option value='en'>{context.locale === 'en' ? 'English' : 'Inglés'}</option>
+            </select>
         </div>
     );
 };
