@@ -1,12 +1,10 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from "react-dom";
-import {IntlProvider} from 'react-intl';
 
 import JobsList from "./components/jobslist";
-import localeEsMessages from "./locales/es";
-
+import LanguageWrapper from "./components/LanguageWrapper";
 
 ReactDOM.render(
-    <IntlProvider locale="es-ES" messages={localeEsMessages}>
+    <LanguageWrapper>
         <JobsList/>
-    </IntlProvider>, document.getElementById("root"));
+    </LanguageWrapper>, document.getElementById("root"));
